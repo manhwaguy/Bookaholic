@@ -114,7 +114,7 @@ public class DisplayCatalogModel implements Initializable {
 		}
 		
 		catch(SQLException sqlException) {
-			
+		
 			sqlException.printStackTrace();
 		}
 	}
