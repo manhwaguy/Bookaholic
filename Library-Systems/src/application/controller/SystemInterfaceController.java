@@ -37,22 +37,22 @@ import application.model.UpdateUsersModel;
 
 public class SystemInterfaceController implements Initializable {
 
-	/*
-	 * Primary AnchorPane for SystemInterface FXML
-	 * file with Exit Button
-	 */
+   /*
+    * Primary AnchorPane for SystemInterface FXML
+    * file with Exit Button
+    */
 	
-	@FXML
+    @FXML
     private AnchorPane systemPane;
 	
-	@FXML
+    @FXML
     private Button exitButton;
 
-    /*
-     * Check Out Tab Pane and all
-     * associated TextFields &
-     * Buttons.
-     */
+   /*
+    * Check Out Tab Pane and all
+    * associated TextFields &
+    * Buttons.
+    */
     
     @FXML
     private AnchorPane checkOutPane;
@@ -84,11 +84,11 @@ public class SystemInterfaceController implements Initializable {
     @FXML
     private TextField bookIDReturnField;
 
-    /*
-     * Catalog Tab Pane and all
-     * associated Tables, Columns, 
-     * & Buttons.
-     */
+   /*
+    * Catalog Tab Pane and all
+    * associated Tables, Columns, 
+    * & Buttons.
+    */
     
     @FXML
     private AnchorPane catalogPane;
@@ -112,11 +112,11 @@ public class SystemInterfaceController implements Initializable {
     private Button displayBooksButton;
 
 
-    /*
-     * Users Tab Pane and all
-     * associated Tables, Columns,
-     * & Buttons.
-     */
+   /*
+    * Users Tab Pane and all
+    * associated Tables, Columns,
+    * & Buttons.
+    */
     
     @FXML
     private AnchorPane usersPane;
@@ -136,11 +136,11 @@ public class SystemInterfaceController implements Initializable {
     @FXML
     private TableColumn<DisplayUsersModel, String> studentIDColumn;
 
-    /*
-     * Update Books Tab Pane and all
-     * associated TextFields, TextAreas,
-     * & Buttons.
-     */
+   /*
+    * Update Books Tab Pane and all
+    * associated TextFields, TextAreas,
+    * & Buttons.
+    */
     
     @FXML
     private AnchorPane updateBooksPane;
@@ -166,11 +166,11 @@ public class SystemInterfaceController implements Initializable {
     @FXML
 	private TextArea informationArea;
     
-    /*
-     * Update User Tab Pane and all
-     * associated TextFields, TextAreas,
-     * & Buttons.
-     */
+   /*
+    * Update User Tab Pane and all
+    * associated TextFields, TextAreas,
+    * & Buttons.
+    */
 
     @FXML
     private AnchorPane updateUserPane;
@@ -197,43 +197,43 @@ public class SystemInterfaceController implements Initializable {
     DatabaseHandler databaseHandler;
     
     @Override
-	public void initialize(URL arg0, ResourceBundle arg1) {
+    public void initialize(URL arg0, ResourceBundle arg1) {
 		
     	//establishes db connection
-		databaseHandler = DatabaseHandler.getInstance();
+	databaseHandler = DatabaseHandler.getInstance();
 		
-		//create columns methods for Books and Students tables
-		createBookColumns();
-		createStudentColumns();
+	//create columns methods for Books and Students tables
+	createBookColumns();
+	createStudentColumns();
 		
-		//sets ID column in student table from id column in Student table
-		studentIDColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
-	}
+	//sets ID column in student table from id column in Student table
+	studentIDColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
+    }
     
     //creates columns for Books table and displays information
     private void createBookColumns() {
 		
-  		authorColumn.setCellValueFactory(new PropertyValueFactory<>("author"));
-  		titleColumn.setCellValueFactory(new PropertyValueFactory<>("title"));
-  		bookIDColumn.setCellValueFactory(new PropertyValueFactory<>("bookID"));
-  		statusColumn.setCellValueFactory(new PropertyValueFactory<>("status"));
-  	}
+  	authorColumn.setCellValueFactory(new PropertyValueFactory<>("author"));
+  	titleColumn.setCellValueFactory(new PropertyValueFactory<>("title"));
+  	bookIDColumn.setCellValueFactory(new PropertyValueFactory<>("bookID"));
+  	statusColumn.setCellValueFactory(new PropertyValueFactory<>("status"));
+    }
     
     //creates columns for Students table and displays information
     private void createStudentColumns() {
 		
-		emailColumn.setCellValueFactory(new PropertyValueFactory<>("email"));
-		//studentIDColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
-		classYearColumn.setCellValueFactory(new PropertyValueFactory<>("classYear"));
-	}
+	emailColumn.setCellValueFactory(new PropertyValueFactory<>("email"));
+	//studentIDColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
+	classYearColumn.setCellValueFactory(new PropertyValueFactory<>("classYear"));
+    }
 
-    /*
-     * Returns user to Main screen
-     * when Exit button is clicked. 
-     * 
-     */
+   /*
+    * Returns user to Main screen
+    * when Exit button is clicked. 
+    * 
+    */
     
-	@FXML
+    @FXML
     void returnHome(ActionEvent event) throws IOException {
 
     	systemPane = FXMLLoader.load(getClass().getResource("/application/view/Main.fxml"));
@@ -244,11 +244,11 @@ public class SystemInterfaceController implements Initializable {
     	window.show();
     }
 
-	/*
-	 * Adds a book to the Books Table
-	 * when Add button is pressed.
-	 * 
-	 */
+   /*
+    * Adds a book to the Books Table
+    * when Add button is pressed.
+    * 
+    */
 	
     @FXML
     void addBook(ActionEvent event) throws IOException, SQLException {
@@ -290,11 +290,11 @@ public class SystemInterfaceController implements Initializable {
     	status.setText("");
     }
 
-    /*
-     * Deletes a book from the Books Table
-     * when Delete button clicked.
-     * 
-     */
+   /*
+    * Deletes a book from the Books Table
+    * when Delete button clicked.
+    * 
+    */
     
     @FXML
     void deleteBook(ActionEvent event) throws IOException {
@@ -330,12 +330,12 @@ public class SystemInterfaceController implements Initializable {
     	status.setText("");
     }
 
-    /*
-     * Checks book out if
-     * Check Out button
-     * clicked.
-     * 
-     */
+   /*
+    * Checks book out if
+    * Check Out button
+    * clicked.
+    * 
+    */
     
     @FXML
     void checkOut(ActionEvent event) throws IOException, SQLException {
@@ -351,12 +351,12 @@ public class SystemInterfaceController implements Initializable {
     	bookIDCheckOutField.setText(""); 
     }
 
-    /*
-     * Returns book if
-     * Return button
-     * clicked
-     * 
-     */
+   /*
+    * Returns book if
+    * Return button
+    * clicked
+    * 
+    */
     
     @FXML
     void returnBook(ActionEvent event) throws IOException, SQLException {
@@ -372,11 +372,11 @@ public class SystemInterfaceController implements Initializable {
     	bookIDReturnField.setText(""); 
     }
 
-    /*
-     * Adds user to Students table
-     * when Add button is clicked.
-     * 
-     */
+   /*
+    * Adds user to Students table
+    * when Add button is clicked.
+    * 
+    */
     
     @FXML
     void addUser(ActionEvent event) throws IOException, SQLException {
@@ -410,12 +410,12 @@ public class SystemInterfaceController implements Initializable {
         classYearField.setText("");
     }
     
-    /*
-     * Deletes user from Students
-     * table when Delete button
-     * is clicked.
-     * 
-     */
+   /*
+    * Deletes user from Students
+    * table when Delete button
+    * is clicked.
+    * 
+    */
     
     @FXML
     void deleteUser(ActionEvent event) throws SQLException {
@@ -449,12 +449,12 @@ public class SystemInterfaceController implements Initializable {
         classYearField.setText("");
     }
     
-    /*
-     * Displays all books from Books
-     * table when Display button is pressed
-     * in Catalog Tab.
-     * 
-     */
+   /*
+    * Displays all books from Books
+    * table when Display button is pressed
+    * in Catalog Tab.
+    * 
+    */
     
     @FXML
     void displayBooks(ActionEvent event) throws IOException {
@@ -466,13 +466,13 @@ public class SystemInterfaceController implements Initializable {
     	tableDisplay.getItems().setAll(DisplayCatalogModel.list);
     }
     
-    /*
-     * Displays all students from
-     * Students table when Display
-     * button is pressed in Users
-     * tab.
-     * 
-     */
+   /*
+    * Displays all students from
+    * Students table when Display
+    * button is pressed in Users
+    * tab.
+    * 
+    */
     
     @FXML
     void displayStudent(ActionEvent event) {
