@@ -67,30 +67,30 @@ public class MainController {
     	verified = VerifyLoginModel.VerifyLogin(username, password);
     	
     	//if string return matches, user is taken to the System Interface window
-		if(verified == "verified") {
+	if(verified == "verified") {
 			
-			welcomePane = FXMLLoader.load(getClass().getResource("/application/view/SystemInterface.fxml"));
+		welcomePane = FXMLLoader.load(getClass().getResource("/application/view/SystemInterface.fxml"));
 	    	Scene scene = new Scene(welcomePane,600,425);
 	    	scene.getStylesheets().add(getClass().getResource("/application/application.css").toExternalForm());
 	    	Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
 	    	window.setScene(scene);
 	    	window.show();
-		}
+	}
    
-		//if string return matches, an error displays
-		else if(verified == "notVerified") {
+	//if string return matches, an error displays
+	else if(verified == "notVerified") {
 			
-			Alert alert = new Alert(AlertType.ERROR);
+		Alert alert = new Alert(AlertType.ERROR);
     		alert.setHeaderText(null);
     		alert.setContentText("The username and password you entered do not match our records. Please try again.");
     		alert.showAndWait();
     		return;
-		}
+	}
 		
-		else {
+	else {
 			
-			return;
-		}
+		return;
+	}
     }
 
     /*
