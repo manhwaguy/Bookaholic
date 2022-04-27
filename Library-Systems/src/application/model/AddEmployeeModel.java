@@ -103,8 +103,6 @@ public class AddEmployeeModel implements Initializable {
 			catch (Exception e) {
 
 				e.printStackTrace();
-			}
-			
-			
+			}			
 	}
 }
