@@ -85,14 +85,14 @@ public class AdministratorController implements Initializable {
     DatabaseHandler databaseHandler;
     
     @Override
-	public void initialize(URL arg0, ResourceBundle arg1) {
+    public void initialize(URL arg0, ResourceBundle arg1) {
 		
     	//establishes db connection
-		databaseHandler = DatabaseHandler.getInstance();
+	databaseHandler = DatabaseHandler.getInstance();
 		
-		//sets staffColum with properties pulled from username column in Employees Table
-		staffColumn.setCellValueFactory(new PropertyValueFactory<>("username"));
-	}
+	//sets staffColum with properties pulled from username column in Employees Table
+	staffColumn.setCellValueFactory(new PropertyValueFactory<>("username"));
+     }
 
     /*
      * When user clicks on Display button
@@ -104,18 +104,18 @@ public class AdministratorController implements Initializable {
 	@FXML
     void displayStaff(ActionEvent event) {
 
-		//calls on DisplayStaff method from DisplayEmployeeModel Class
-		DisplayEmployeeModel.DisplayStaff();
+	//calls on DisplayStaff method from DisplayEmployeeModel Class
+	DisplayEmployeeModel.DisplayStaff();
 		
-		//sets staffTable with populated list from DisplayEmployeeModel Class
+	//sets staffTable with populated list from DisplayEmployeeModel Class
     	staffTable.getItems().setAll(DisplayEmployeeModel.list);
     }
 
-	/*
-	 * Removes Staff based on username
-	 * entered into text field.
-	 * 
-	 */
+    /*
+     * Removes Staff based on username
+     * entered into text field.
+     * 
+     */
 	
     @FXML
     void removeEmployee(ActionEvent event) throws SQLException {
