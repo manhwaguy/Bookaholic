@@ -27,7 +27,7 @@ public class Main extends Application {
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			
 			//sets title for all windows while application is running
-			primaryStage.setTitle("University Library Management System");
+			primaryStage.setTitle("Library Systems V1.5");
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		}
