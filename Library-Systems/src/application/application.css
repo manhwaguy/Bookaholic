@@ -1,0 +1,18 @@
+/* Application.css file that makes a persistent
+ * background color and font run throughout the
+ * applications runtime.
+ * 
+ * Author: Melwyn Cespedes
+ * CS 3443 - Spring 2022
+ */
+
+.root {
+	
+	-fx-background-color: lightblue;
+	-fx-font-family: "Rockwell";
+}
+
+#createAccountPane {
+	
+	-fx-background-color: lightblue;
+}
