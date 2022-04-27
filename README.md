@@ -6,7 +6,7 @@
 
 # Title - A Univeristy Library Management System
 
-# Group Name - BookWorms
+# Group Name - Librarian
 
 # Author - Melwyn Cespedes
 
