@@ -52,14 +52,14 @@ public class CreateAccountController implements Initializable {
 		
     	//establishes db connection
     	databaseHandler = DatabaseHandler.getInstance();
-	}
+    }
 
-    /*
-     * Submits a username and password to the
-     * Employees Table in the database when
-     * Submit button is clicked.
-     * 
-     */
+   /*
+    * Submits a username and password to the
+    * Employees Table in the database when
+    * Submit button is clicked.
+    * 
+    */
     
     @FXML
     void submit(ActionEvent event) throws IOException {
@@ -69,9 +69,9 @@ public class CreateAccountController implements Initializable {
     	String password = passwordField.getText();
     	
     	//calls AddEmployee method from AddEmployeeModel class
-		AddEmployeeModel.AddEmployee(username, password);
+	AddEmployeeModel.AddEmployee(username, password);
     	
-		//clears text fields
+	//clears text fields
     	userNameField.setText(""); 	
     	passwordField.setText(""); 
     }
