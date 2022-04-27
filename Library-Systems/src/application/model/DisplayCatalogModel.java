@@ -99,7 +99,7 @@ public class DisplayCatalogModel implements Initializable {
     	DatabaseHandler databaseHandler = DatabaseHandler.getInstance();
     	String query = "SELECT * FROM Books";
 		java.sql.ResultSet rs = databaseHandler.performQuery(query);
-		
+	
 		try {
 			
 			//while loop that goes through each row in the table and returns values
